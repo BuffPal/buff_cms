@@ -1,0 +1,135 @@
+/*
+*自定义评论样式函数 被single.php调用
+*/
+#clist{
+    margin-top:50px;
+}
+#commentList>li>div>div:nth-of-type(1)>div>img{
+    border-radius: 50%;
+    float: left;
+}
+#commentList>li>div>div:nth-of-type(1)>div>cite{
+    float: left;
+}
+#commentList>li>div>div:nth-of-type(1)>div>cite>a{
+    color: #888;
+    padding-left:20px;
+}
+span.time{
+    float: right;
+    text-align: right;
+    color: #aaa;
+}
+#commentContent>p{
+    padding-left:90px;
+    color: #333;
+}
+#commentContent .reply{
+    text-align: right;
+}
+#commentContent .reply>a{
+    color: #aaa;
+}
+hr{
+    border: none;
+    height: 1px;
+    background-color: #eee;
+}
+#commentContent>div>a{
+    color: #2787C1;
+    transition:.5s;
+}
+#commentContent>div>a:hover{
+    color: #30405B;
+}
+.children{
+    margin-left:60px;
+}
+/*
+*评论框
+*/
+#respond{
+    margin-top:20px;
+}
+#newTitle{
+    text-align: left;
+    text-indent: 1rem;
+    color: #888;
+}
+#newTitle a{
+    color: #30405B;
+}
+#newTitle small>a{
+    color: #0B74B6;
+}
+#commentform>p:nth-of-type(1)>a{
+    color: #30405B;
+}
+#commentform>p:nth-of-type(1)>a:nth-of-type(2){
+    color: #0B74B6;
+}
+#commentform>p:nth-of-type(2)>label{
+    display: none;
+}
+#commentform>p:nth-of-type(2)>textarea{
+    margin-top:10px;
+    width: 400px;
+    height: 160px;
+    resize: none;
+    border:1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 15px;
+    color: #666;
+    transition:.5s ease-in-out;
+}
+#commentform>p:nth-of-type(2)>textarea:focus{
+    border:1px solid #00A2FF;
+    box-shadow: 0 0 5px #a7e5ff;
+}
+#submit{
+    padding:5px 10px;
+    border:none;
+    margin-top:10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #30405B;
+    opacity:.5;
+    color: #fff;
+    transition:.3s ease-in-out;
+}
+#submit:hover{
+    opacity:1;
+}
+#notReply{
+    list-style-type: none;
+    float: left;
+    padding:20px;
+    text-align: center;
+    width: 100%;
+}
+#notReply>a{
+    color: #00A2FF;
+}
+div.updown{
+    width: 100%;
+    height: 50px;
+    padding:20px 0;
+}
+div.updown a{
+    color: #888;
+    transition:.3s ease-in-out;
+}
+div.updown a:hover{
+    color: #00A2FF;
+}
+div.updown i{
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height:50px;
+    border-radius: 10px;
+    font-size:25px;
+    color: #ddd;
+}
