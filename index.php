@@ -6,7 +6,9 @@
             $iFilmslide = buffpal('buffpal_filmslide_category_id');
             $iFilmslideCount = buff::get_category_count($iFilmslide);   //通过ID获取分类的统计量.用于循环幻灯片下面的小按钮
             $aFilmslideLast = array();
-            foreach(get_posts(array('category'=>$iFilmslide,'numberposts'=>8)) as $k=>$v):
+            $filmslide_arr = get_posts(array('category'=>$iFilmslide,'numberposts'=>8));
+            if(count($filmslide_arr)>0):
+            foreach($filmslide_arr as $k=>$v):
                 $data =buff::get_filmslide_arr($v->post_content);
                 if($k == 0){
                     $aFilmslideLast['arr'] = $v;
@@ -48,7 +50,9 @@
                 </div>
             </div>
         </aside>
-
+    <?php else: ?>
+        <h1 style="text-align: center;line-height: 400px;color: #888;" class="container-fluid">请到后台设置您的幻灯片</h1>
+    <?php endif; ?>
     </div>
     <div class="control">
         <i class="active"></i>

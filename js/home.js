@@ -13,6 +13,7 @@ $(function () {
     var aAside = $("div.wrap aside");
     var aI = $('#crs_home div.control i');
     var iNow = 0;
+    var iOld = 0;
     //先给第二张图片加上还原动画
     aAside.eq(1).addClass('show');
     timer = setInterval(change, time);
@@ -35,15 +36,20 @@ $(function () {
         clearInterval(timer);
         //获取当前点击的位置
         var iClick = aI.index(this);
+        iOld = iNow;
         aI.eq(iClick).addClass('active').siblings().removeClass('active');
 
         //判断z-index解决切换相对之前的图片时候,因为Z-index不能正确显示
         var zIndex = aAside.eq(iNow).css('z-index');
-        aAside.eq(iNow).css('z-index', parseInt(zIndex) + Math.ceil(Math.random() * 20));
-
         //执行切换
-        aAside.eq(iNow).addClass('show').siblings().removeClass('show');
+        aAside.eq(iOld).addClass('show').siblings().removeClass('show');
         aAside.eq(iClick).addClass('show');
+        setTimeout(function(){
+            aAside.eq(iClick).css('z-index', parseInt(zIndex) + Math.ceil(Math.random() * 20));
+        },1800);
+
+
+
         $('#crs_home .title').eq(iClick).animate({
             'z-index': '3'
         });
@@ -63,11 +69,14 @@ $(function () {
         $('#crs_home .more').eq(iClick).removeClass('c_button_animation');
         $('#crs_home .c_bg').eq(iClick).removeClass('c_bg_animation');
 
+
         aAside.eq(iNow).addClass('show').siblings().removeClass('show');
         iNow = iClick;
         aAside.eq(iNow).addClass('show');
         aAside.eq(iNow + 1).addClass('show');
         aAside.eq(iNow + 2).addClass('show');
+
+
 
         timer = setInterval(change, time);
     })
@@ -117,6 +126,9 @@ $(function () {
             aAside.eq(iNow + 1).addClass('show');
             aAside.eq(iNow + 2).addClass('show');
         }
+        setTimeout(function(){
+            aAside.eq(iNow-1).removeClass('show');
+        },1200);
 
         //轮播器控制按钮
         var aControl = $('div.control>i');

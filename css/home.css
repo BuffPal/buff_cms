@@ -72,6 +72,7 @@
     text-shadow: 0 0 1px #333;
 }
 #crs_home .wrap>aside>.info>.info_wrap>.aside_info>div{
+    position:relative;
     margin:10px 0;
     z-index: 300;
     transition: all 0.5s 1s ease-in-out;

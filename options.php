@@ -131,13 +131,14 @@ function optionsframework_options()
     //如果没有封面图,设置默认封面图buffpal_search_default_poster
     $options[] = array(
         'name' => '最新动态背景图',
-        'desc' => '如果上属分类,不存在封面图将会使用默认封面图 标准尺寸为 宽260px 高190px',
+        'desc' => '如果最新动态,不存在封面图将会使用默认封面图 标准尺寸为 宽260px 高190px',
         'id' => 'buffpal_news_default_poster',
 		'type' => 'upload'
 	);
 
     //如果没有封面图,设置默认封面图
     $options[] = array(
+        'name' => '最新电影',
         'desc' => '如果最新电影,不存在封面图将会使用默认封面图 标准尺寸为 宽255px 高150px',
         'id' => 'buffpal_newvideo_default_poster',
         'type' => 'upload'
