@@ -97,7 +97,7 @@ function optionsframework_options()
 
     if ($options_categories) {
         $options[] = array(
-            'name' => '最新电影',
+            'name' => '最新视频,默认封面图',
             'desc' => '请选着最新电影,将要显示的分类',
             'id' => 'buffpal_newvideo_category_id',
             'type' => 'select',

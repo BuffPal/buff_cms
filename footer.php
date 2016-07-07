@@ -1,7 +1,7 @@
 <?php wp_footer() ?>
 <script>
-    var time = <?php $time = buffpal('buffPal_filmslide_time');
-                    $time = empty($time) ? 10000 : $time;
+    var time = <?php
+                    $time = buffpal('buffpal_filmslide_time') ? buffpal('buffpal_filmslide_time') :10000;
         echo $time;
     ?>//幻灯片转换时间
     /**
